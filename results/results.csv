@@ -1,0 +1,24 @@
+experiment,model,family,test_accuracy,train_accuracy,precision,recall,f1,roc_auc,training_time_s,inference_time_s
+baseline,Logistic Regression,classical,0.9561,0.9626,0.9467,0.9861,0.966,0.9927,0.007,0.0
+baseline,SVM (RBF Kernel),classical,0.9561,0.9736,0.9589,0.9722,0.9655,0.9924,0.005,0.002
+baseline,VQC (Depth 2),quantum,0.9386,0.8769,0.9221,0.9861,0.953,0.9788,5.091,0.37
+depth,VQC Depth 1,quantum,0.9035,0.8703,0.9178,0.9306,0.9241,0.9732,4.337,0.369
+depth,VQC Depth 2,quantum,0.9386,0.8769,0.9221,0.9861,0.953,0.9788,5.091,0.003
+depth,VQC Depth 3,quantum,0.9211,0.8813,0.9091,0.9722,0.9396,0.9712,5.748,0.363
+noise,Ideal Simulator (no noise),quantum,0.9386,0.8769,0.9221,0.9861,0.953,0.9788,5.091,0.003
+noise,Noisy Inference (1.0% depolarizing),quantum,0.9211,0.8857,0.92,0.9583,0.9388,0.9785,5.091,0.145
+noise,Noise-Aware Training (1.0% depolarizing),quantum,0.9298,0.8769,0.9103,0.9861,0.9467,0.9772,265.324,0.153
+noise_sweep,"Ideal (0.0%, exact)",quantum,0.9386,0.8769,0.9221,0.9861,0.953,0.9788,5.091,0.049
+noise_sweep,Depolarizing 0.0% (1024 shots),quantum,0.9298,0.8791,0.9103,0.9861,0.9467,0.9782,5.091,0.542
+noise_sweep,Depolarizing 0.5% (exact),quantum,0.9386,0.8813,0.9221,0.9861,0.953,0.9782,5.091,0.179
+noise_sweep,Depolarizing 0.5% (1024 shots),quantum,0.9211,0.8791,0.9091,0.9722,0.9396,0.9749,5.091,0.512
+noise_sweep,Depolarizing 1.0% (exact),quantum,0.9211,0.8857,0.92,0.9583,0.9388,0.9785,5.091,0.159
+noise_sweep,Depolarizing 1.0% (1024 shots),quantum,0.9211,0.8857,0.92,0.9583,0.9388,0.9737,5.091,0.511
+noise_sweep,Depolarizing 2.0% (exact),quantum,0.9211,0.8857,0.92,0.9583,0.9388,0.9782,5.091,0.156
+noise_sweep,Depolarizing 2.0% (1024 shots),quantum,0.9123,0.8945,0.9189,0.9444,0.9315,0.9706,5.091,0.539
+noise_sweep,Depolarizing 5.0% (exact),quantum,0.8947,0.8967,0.9286,0.9028,0.9155,0.9722,5.091,0.143
+noise_sweep,Depolarizing 5.0% (1024 shots),quantum,0.8509,0.8505,0.9231,0.8333,0.8759,0.9205,5.091,0.645
+noise_sweep,Depolarizing 10.0% (exact),quantum,0.8684,0.9011,0.9524,0.8333,0.8889,0.9673,5.091,0.168
+noise_sweep,Depolarizing 10.0% (1024 shots),quantum,0.5965,0.589,0.7241,0.5833,0.6462,0.6485,5.091,0.668
+noise_sweep,Depolarizing 20.0% (exact),quantum,0.7807,0.8527,0.9608,0.6806,0.7967,0.9474,5.091,0.332
+noise_sweep,Depolarizing 20.0% (1024 shots),quantum,0.5439,0.5121,0.6724,0.5417,0.6,0.5605,5.091,0.596

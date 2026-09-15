@@ -1,0 +1,35 @@
+{
+  "seed": 42,
+  "output_dir": "results",
+  "depths": [1, 2, 3],
+  "reference_depth": 2,
+  "noise_sweep": [0.0, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+  "noise_sweep_shots": [0, 1024],
+  "data": {
+    "n_components": 4,
+    "test_size": 0.2,
+    "feature_range": [-1.0, 1.0],
+    "standardize_before_pca": true
+  },
+  "circuit": {
+    "feature_map_reps": 2,
+    "feature_map_entanglement": "full",
+    "feature_map_data_map": "product",
+    "ansatz_entanglement": "linear",
+    "depth": 2
+  },
+  "training": {
+    "optimizer": "COBYLA",
+    "maxiter": 500,
+    "initial_step": 0.5,
+    "tol": 0.0001,
+    "l2_regularization": 0.0
+  },
+  "noise": {
+    "enabled": false,
+    "one_qubit_error": 0.01,
+    "two_qubit_error": 0.01,
+    "readout_error": 0.0,
+    "shots": 0
+  }
+}
